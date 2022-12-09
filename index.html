@@ -16,10 +16,6 @@
     <link rel="stylesheet" href="./files/font-awesome.min.css">
     <link rel="stylesheet" href="./files/codemirror.min.css">
     <link rel="stylesheet" href="./files/app.css">
-
-
-
-
 </head>
 
 <body>
@@ -97,20 +93,16 @@
             </div>
         </div>
 
-
         <div class="row">
             <div class="col-md-4 col-md-offset-4 text-center">
                 <ul class="nav nav-pills nav-justified">
                     <li>
-                        <a href="https://arxiv.org/abs/2211.14506">
+                        <a href="https://arxiv.org/abs/2212.04248">
                             <img src="./files/paper.png" height="60px">
                             <h4><strong>Paper</strong></h4>
                         </a>
                     </li>
-
                     <li>
-<!--                         <a onClick="alert('Code coming soon!\nContact dengyu2008@hotmail.com for more details.')"> -->
-                        <!-- <a href="https://github.com/dorniwang/TH-PAD"> -->
                         <a>
                             <img src="./files/github.png" height="60px">
                             <h4><strong>Code (coming soon)</strong></h4>
@@ -123,15 +115,11 @@
         <div class="row">
             <div class="col-md-12 col-md-offset-0 text-center">
                 <a>
-                    <!-- <video style="width:100%;height:100%;" playsinline autoplay loop preload muted>
-                        <source src="./files/cover.mp4" type="video/mp4">
-                    </video> -->
                     <img src="./files/teaser.png" class="img-responsive" alt="teaser"><br>
-                    
                 </a>
                 <p class="text-justify" style="font-size: 16px;">
-                    Given only an audio source and an arbitrary identity image, our system can generate a video with natural-looking and diverse facial 
-                    motions (pose, expression, blink & gaze), while maintaining accurate audio-lip synchronization. Here we show randomly sampled sequences 
+                    Given only an audio source and an arbitrary identity image, our system can generate a video with natural-looking and diverse facial
+                    motions (pose, expression, blink & gaze), while maintaining accurate audio-lip synchronization. Here we show randomly sampled sequences
                     from our diffusion prior for two identities, note that the lip-irrelevant facial motion varies but the lip is still in-sync.
                 </p>
                 <br></br>
@@ -140,15 +128,15 @@
                 </h2>
                 <hr style="margin-top:0px">
                 <p class="text-justify" style="font-size: 16px;">
-                    In this paper, we introduce a simple and novel framework for one-shot audio-driven talking head generation. Unlike prior works that 
-                    require additional driving sources for controlled synthesis in a deterministic manner, we instead probabilistically sample all the holistic 
-                    lip-irrelevant facial motions (i.e. pose, expression, blink, gaze, etc.) to semantically match the input audio while still maintaining 
-                    both the photo-realism of audio-lip synchronization and the overall naturalness. This is achieved by our newly proposed audio-to-visual 
-                    diffusion prior trained on top of the mapping between audio and disentangled non-lip facial representations. Thanks to the probabilistic 
-                    nature of the diffusion prior, one big advantage of our framework is it can synthesize diverse facial motion sequences given the same audio 
-                    clip, which is quite user-friendly for many real applications. Through comprehensive evaluations on public benchmarks, we conclude that 
-                    (1) our diffusion prior outperforms auto-regressive prior significantly on almost all the concerned metrics; (2) our overall system is 
-                    competitive with prior works in terms of audio-lip synchronization but can effectively sample rich and natural-looking lip-irrelevant 
+                    In this paper, we introduce a simple and novel framework for one-shot audio-driven talking head generation. Unlike prior works that
+                    require additional driving sources for controlled synthesis in a deterministic manner, we instead probabilistically sample all the holistic
+                    lip-irrelevant facial motions (i.e. pose, expression, blink, gaze, etc.) to semantically match the input audio while still maintaining
+                    both the photo-realism of audio-lip synchronization and the overall naturalness. This is achieved by our newly proposed audio-to-visual
+                    diffusion prior trained on top of the mapping between audio and disentangled non-lip facial representations. Thanks to the probabilistic
+                    nature of the diffusion prior, one big advantage of our framework is it can synthesize diverse facial motion sequences given the same audio
+                    clip, which is quite user-friendly for many real applications. Through comprehensive evaluations on public benchmarks, we conclude that
+                    (1) our diffusion prior outperforms auto-regressive prior significantly on almost all the concerned metrics; (2) our overall system is
+                    competitive with prior works in terms of audio-lip synchronization but can effectively sample rich and natural-looking lip-irrelevant
                     facial motions while still semantically harmonized with the audio input.
                 </p>
             </div>
@@ -179,16 +167,14 @@
                 <hr style="margin-top:0px">
                 <img src="./files/overview.png" class="img-responsive" alt="overview"><br>
                 <p class="text-justify" style="font-size: 16px;">
-                    The overall pipeline of our proposed framework. The dotted lines represent the loss functions that are used only in training, i.e., 
-                    L_{cl}, L_{ol} and L_{a2nl}. L_{G} is the training loss for visual non-lip space. Note that there is a switch in the figure, which means 
-                    the different forward processes in training and inference: in training, the concatenated feature f_{cat} = cat(f_{id}, f_{nl}^{v}, 
-                    f_{l}^a); at inference stage, f_{cat} = cat(f_{id}, f_{nl}^a, f_{l}^a). Thus the part of Lip & Non-lip Disentanglement is not needed 
+                    The overall pipeline of our proposed framework. The dotted lines represent the loss functions that are used only in training, i.e.,
+                    L_{cl}, L_{ol} and L_{a2nl}. L_{G} is the training loss for visual non-lip space. Note that there is a switch in the figure, which means
+                    the different forward processes in training and inference: in training, the concatenated feature f_{cat} = cat(f_{id}, f_{nl}^{v},
+                    f_{l}^a); at inference stage, f_{cat} = cat(f_{id}, f_{nl}^a, f_{l}^a). Thus the part of Lip & Non-lip Disentanglement is not needed
                     anymore at the inference stage.
                 </p>
             </div>
         </div>
-
-
 
         <div class="row">
             <div class="col-md-12 col-md-offset-0 text-center">
@@ -213,7 +199,7 @@
                 </video>
                 <hr style="margin-top:0px">
                 <p class="text-justify" style="font-size: 16px;">
-                    Compared with other methods, TH-PAD is able to generate richer facial motions with more accurate lip motion. Moreover, it can bring about different 
+                    Compared with other methods, TH-PAD is able to generate richer facial motions with more accurate lip motion. Moreover, it can bring about different
                     results for the same audio source.
                 </p>
                 <video style="width:100%;height:100%;" controls style="margin: 5px;" >
@@ -236,7 +222,7 @@
                 </h2>
                 <hr style="margin-top:0px">
                 <p class="text-justify" style="font-size: 16px;">
-                    Without velocity loss L_{vel}, the prediction becomes unstable. While training without the editing mechanism, we applied editing only during sampling 
+                    Without velocity loss L_{vel}, the prediction becomes unstable. While training without the editing mechanism, we applied editing only during sampling
                     as in MDM, and observed that it jitters between adjacent frames.
                 </p>
                 <video style="width:100%;height:100%;" controls style="margin: 5px;" >
@@ -278,12 +264,11 @@
                                             <div class="CodeMirror-measure"></div>
                                             <div style="position: relative; z-index: 1;"></div>
                                             <div class="CodeMirror-cursors">
-                                                <div class="CodeMirror-cursor"
-                                                    style="left: 4px; top: 0px; height: 17.1406px;">&nbsp;</div>
+                                            <div class="CodeMirror-cursor"
+                                                style="left: 4px; top: 0px; height: 17.1406px;">&nbsp;</div>
                                             </div>
                                             <div class="CodeMirror-code" style="">
-                                                <pre
-                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;"></span></pre>
+                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"></span></pre>
                                             </div>
                                         </div>
                                     </div>
@@ -310,8 +295,5 @@
                 </p>
             </div>
         </div>
-
-
 </body>
-
 </html>
