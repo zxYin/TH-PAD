@@ -128,16 +128,16 @@
                 </h2>
                 <hr style="margin-top:0px">
                 <p class="text-justify" style="font-size: 16px;">
-                    In this paper, we introduce a simple and novel framework for one-shot audio-driven talking head generation. Unlike prior works that
-                    require additional driving sources for controlled synthesis in a deterministic manner, we instead probabilistically sample all the holistic
-                    lip-irrelevant facial motions (i.e. pose, expression, blink, gaze, etc.) to semantically match the input audio while still maintaining
-                    both the photo-realism of audio-lip synchronization and the overall naturalness. This is achieved by our newly proposed audio-to-visual
-                    diffusion prior trained on top of the mapping between audio and disentangled non-lip facial representations. Thanks to the probabilistic
-                    nature of the diffusion prior, one big advantage of our framework is it can synthesize diverse facial motion sequences given the same audio
-                    clip, which is quite user-friendly for many real applications. Through comprehensive evaluations on public benchmarks, we conclude that
-                    (1) our diffusion prior outperforms auto-regressive prior significantly on almost all the concerned metrics; (2) our overall system is
-                    competitive with prior works in terms of audio-lip synchronization but can effectively sample rich and natural-looking lip-irrelevant
-                    facial motions while still semantically harmonized with the audio input.
+                    We introduce a novel framework for one-shot audio-driven talking head generation. Unlike prior works that require additional driving 
+                    sources for controlled synthesis in a deterministic manner, we instead sample all holistic lip-irrelevant facial motions (i.e. pose, 
+                    expression, blink, gaze, etc.) to semantically match the input audio while still maintaining both the photo-realism of audio-lip 
+                    synchronization and overall naturalness. This is achieved by our newly proposed audio-to-visual diffusion prior trained on top of 
+                    the mapping between audio and non-lip representations. Thanks to the probabilistic nature of the diffusion prior, one big advantage 
+                    of our framework is it can synthe-size diverse facial motion sequences given the same audio clip, which is quite user-friendly for 
+                    many real applications. Through comprehensive evaluations of public benchmarks, we conclude that (1) our diffusion prior outperforms 
+                    auto-regressive prior significantly on all the concerned metrics; (2) our overall system is competitive with prior works in terms of 
+                    audio-lip synchronization but can effectively sample rich and natural-looking lip-irrelevant facial motions while still semantically 
+                    harmonized with the audio input.
                 </p>
             </div>
         </div>
@@ -151,7 +151,7 @@
                 <hr style="margin-top:0px">
                 <div class="text-center">
                     <div style="position:relative;padding-top:56.25%;">
-                        <iframe src="https://www.youtube.com/embed/t4NhpweqfL4" allowfullscreen=""
+                        <iframe src="https://www.youtube.com/embed/CrLXg7Cq8w8" allowfullscreen=""
                             style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
                     </div>
                 </div>
@@ -170,8 +170,8 @@
                     The overall pipeline of our proposed framework. The dotted lines represent the loss functions that are used only in training, i.e.,
                     L_{cl}, L_{ol} and L_{a2nl}. L_{G} is the training loss for visual non-lip space. Note that there is a switch in the figure, which means
                     the different forward processes in training and inference: in training, the concatenated feature f_{cat} = cat(f_{id}, f_{nl}^{v},
-                    f_{l}^a); at inference stage, f_{cat} = cat(f_{id}, f_{nl}^a, f_{l}^a). Thus the part of Lip & Non-lip Disentanglement is not needed
-                    anymore at the inference stage.
+                    f_{l}^a); at inference stage, f_{cat} = cat(f_{id}, f_{nl}^a, f_{l}^a). Thus, the visual motion part is not needed anymore at the 
+                    inference stage.
                 </p>
             </div>
         </div>
@@ -210,6 +210,9 @@
                 </video>
                 <video style="width:100%;height:100%;" controls style="margin: 5px;" >
                     <source src="./files/comparison3.mp4" type="video/mp4">
+                </video>
+                <video style="width:100%;height:100%;" controls style="margin: 5px;" >
+                    <source src="./files/comparison4.mp4" type="video/mp4">
                 </video>
             </div>
         </div>
@@ -268,7 +271,18 @@
                                                 style="left: 4px; top: 0px; height: 17.1406px;">&nbsp;</div>
                                             </div>
                                             <div class="CodeMirror-code" style="">
-                                            <pre class=" CodeMirror-line "><span style="padding-right: 0.1px;"></span></pre>
+                                                <pre 
+                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">@inproceedings{yu2023thpad,</span></pre>
+                                                <pre 
+                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">&nbsp;  title={Talking Head Generation with Probabilistic Audio-to-Visual Diffusion Priors},</span></pre>
+                                                <pre 
+                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">&nbsp;  author={Zhentao Yu, Zixin Yin, Deyu Zhou, Duomin Wang, Finn Wong and Baoyuan Wang},</span></pre>
+                                                <pre 
+                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">&nbsp;  booktitle={ International Conference on Computer Vision (ICCV)},</span></pre>
+                                                <pre 
+                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">year={2023}</span></pre>
+                                                <pre 
+                                                    class=" CodeMirror-line "><span style="padding-right: 0.1px;">}</span></pre>
                                             </div>
                                         </div>
                                     </div>
